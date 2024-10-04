@@ -1,0 +1,228 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Farm-to-Table Dining Experience</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <!-- Particle Container -->
+        <div id="particles">
+            <div class="particle" style="left: 10%; animation-duration: 4s;"></div>
+            <div class="particle" style="left: 20%; animation-duration: 5s;"></div>
+            <div class="particle" style="left: 30%; animation-duration: 6s;"></div>
+            <div class="particle" style="left: 40%; animation-duration: 4.5s;"></div>
+            <div class="particle" style="left: 50%; animation-duration: 5.5s;"></div>
+            <div class="particle" style="left: 60%; animation-duration: 6s;"></div>
+            <div class="particle" style="left: 70%; animation-duration: 4.8s;"></div>
+            <div class="particle" style="left: 80%; animation-duration: 5.8s;"></div>
+        </div>   
+
+        <header>
+            <nav>
+                <div>
+                    <a href="#about">About</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#events">Events</a>
+                    <a href="#contact">Contact</a>
+                    <button id="registerBtn">Register</button>
+                    <button id="loginBtn">Login</button>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button>Search</button>
+                </div>
+            </nav>
+        </header>
+
+        <section id="banner">
+            <h1>Farm-to-Table Dining</h1>
+            <p>Experience the freshest ingredients sourced directly from local farms.<br>
+            Enjoy seasonal fruits & vegetables,<br>
+            and proteins delivered with care.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Farm-to-Table</h2>
+            <p>Farm-to-table dining ensures that food is harvested and delivered quickly,<br>
+            minimizing the time between picking and eating.<br>
+            This results in better-tasting<br>
+            & more nutritious produce.</p>
+        </section>
+
+        <section id="menu">
+            <h2>Menu Highlights</h2>
+            <div class="menu">
+                <div class="menu-item">
+                    <img src="./Tossed-Salad-SWP-4.jpg" alt="Organic Green Salad">
+                    <h3>Organic Green Salad</h3>
+                    <p>Refreshing organic greens with house-made dressing.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="./Barbecue-Chicken-11.webp" alt="Grilled Free-Range Chicken">
+                    <h3>Grilled Free-Range Chicken</h3>
+                    <p>Served with seasonal vegetables.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="./pie.jpg" alt="Homemade Apple Pie">
+                    <h3>Homemade Apple Pie</h3>
+                    <p>Made with fresh, organic apples.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="./shop.avif" alt="Fresh Ingredients">
+                    <h3>Fresh Ingredients</h3>
+                </div>
+                <div class="gallery-item">
+                    <img src="./chef.work.webp" alt="Farm Harvest">
+                    <h3>Farm Harvest</h3>
+                </div>
+                <div class="gallery-item">
+                    <img src="./signature.webp" alt="Cooking Process">
+                    <h3>Cooking Process</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <div class="events">
+                <div class="event-item">
+                    <img src="./fes.jpg" alt="Harvest Festival">
+                    <h3>Harvest Festival</h3>
+                    <p>Celebrate the harvest season with local produce and festivities.</p>
+                </div>
+                <div class="event-item">
+                    <img src="./dev.webp" alt="Cooking Workshop">
+                    <h3>Cooking Workshop</h3>
+                    <p>Learn how to cook with seasonal ingredients from local chefs.</p>
+                </div>
+                <div class="event-item">
+                    <img src="./8-2-Summer-Farm-Tour.jpg" alt="Farm Tour">
+                    <h3>Farm Tour</h3>
+                    <p>Explore local farms and see where your food comes from.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Register Modal -->
+        <div id="registerModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="registerClose">&times;</span>
+                <h2>Register</h2>
+                <form action="http://localhost:3000/v1/regester" method="POST">
+                    <label for="regName">Name:</label>
+                    <input type="text" id="regName" name="name" required>
+
+                    <label for="regEmail">Email:</label>
+                    <input type="email" id="regEmail" name="email" required>
+
+                    <label for="regPassword">Password:</label>
+                    <input type="password" id="regPassword" name="password" required>
+
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="loginClose">&times;</span>
+                <h2>Login</h2>
+                <form action="http://localhost:3000/v1/regester/login" method="POST">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" name="email" required>
+
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="password" required>
+
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; All rights reserved.</p>
+        </footer>
+
+        <script>
+            // Get modal elements
+            var registerModal = document.getElementById("registerModal");
+            var loginModal = document.getElementById("loginModal");
+        
+            // Get the buttons that open the modals
+            var registerBtn = document.getElementById("registerBtn");
+            var loginBtn = document.getElementById("loginBtn");
+        
+            // Get the <span> elements that close the modals
+            var registerClose = document.getElementById("registerClose");
+            var loginClose = document.getElementById("loginClose");
+        
+            // When the user clicks the Register button, open the register modal
+            registerBtn.onclick = function() {
+                registerModal.style.display = "block";
+            }
+        
+            // When the user clicks the Login button, open the login modal
+            loginBtn.onclick = function() {
+                loginModal.style.display = "block";
+            }
+        
+            // When the user clicks on <span> (x), close the modals
+            registerClose.onclick = function() {
+                registerModal.style.display = "none";
+            }
+        
+            loginClose.onclick = function() {
+                loginModal.style.display = "none";
+            }
+        
+            // // Switch to Register Modal from Login Modal
+            // document.getElementById("switchToRegister").onclick = function() {
+            //     loginModal.style.display = "none";
+            //     registerModal.style.display = "block";
+            // }
+        
+            // // Switch to Login Modal from Register Modal
+            // document.getElementById("switchToLogin").onclick = function() {
+            //     registerModal.style.display = "none";
+            //     loginModal.style.display = "block";
+            // }
+        
+            // Close the modal if clicked outside of it
+            window.onclick = function(event) {
+        if (event.target == registerModal) {
+            registerModal.style.display = "none";
+        }
+        if (event.target == loginModal) {
+            loginModal.style.display = "none";  
+        }
+        };
+        </script>
+        
+    </body>
+    </html>
